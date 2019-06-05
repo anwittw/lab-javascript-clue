@@ -1,4 +1,4 @@
-// Characters
+
 
 
 let charactersArray = 
@@ -152,3 +152,31 @@ let roomsArray = [
 ]
 
 console.log('rooms: ', roomsArray)
+
+
+// Create a Selector, to select a random card Iteration 2
+
+function randomSelector(array) {
+  let selector = 0
+  selector = Math.floor(Math.random() * Math.floor(array.length))
+  return array[selector]
+}
+
+// Iteration 3, Pick a Mistery!
+
+
+function pickMistery() {
+  let misteryEnvelope = []
+  misteryEnvelope.push(randomSelector(charactersArray),randomSelector(weaponsArray),randomSelector(roomsArray))
+  return misteryEnvelope
+}
+
+console.log('Picked Mistery:', pickMistery())
+
+// Iteration 4, Revealing the Mistery
+
+function revealMistery(misteryEnvelope) {
+  return `${misteryEnvelope[0].first_name} ${misteryEnvelope[0].last_name} killed Mr.Boddy using the ${misteryEnvelope[1].name} in the ${misteryEnvelope[2].name}!!!!`}
+
+
+console.log('working')
